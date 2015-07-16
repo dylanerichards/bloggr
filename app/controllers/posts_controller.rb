@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :confirm_logged_in, only: [:edit, :update, :destroy, :create]
 
   # GET /posts
   # GET /posts.json

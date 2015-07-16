@@ -7,10 +7,10 @@ class Post < ActiveRecord::Base
   end
 
   def next
-    where("id > ?", id).first
+    Post.where("id > ?", id).first
   end
 
   def prev
-    where("id < ?", id).last
+    Post.where("id < ?", id).last
   end
 end
