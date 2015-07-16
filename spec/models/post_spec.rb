@@ -15,4 +15,13 @@ RSpec.describe Post, :type => :model do
       expect(post1.next).to eq post2
     end
   end
+
+  describe "#prev" do
+    it 'finds the next post' do
+      post1 = Post.create(title: "post1", text: "post1")
+      post2 = Post.create(title: "post2", text: "post2")
+
+      expect(post2.prev).to eq post1
+    end
+  end
 end
