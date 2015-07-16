@@ -18,7 +18,7 @@
         <li><%= link_to "Manage", pages_manage_path %></li>
         <li><%= link_to "About", pages_about_path %></li>
         <% if signed_in? %>
-          <li><%= link_to "Sign Out", destroy_user_session_path %></li>
+          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to "Sign In", new_user_session_path %></li>
         <% end %>
