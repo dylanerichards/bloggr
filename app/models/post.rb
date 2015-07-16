@@ -2,6 +2,8 @@ class Post < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :text
 
+  acts_as_votable
+
   def pretty_created_at
     created_at.to_time.strftime('%B %e at %l:%M %p')
   end

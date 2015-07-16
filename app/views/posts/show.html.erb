@@ -10,6 +10,13 @@
   <%= @post.text %>
 </p>
 
+<%= link_to post_upvote_path(@post) do %>
+  <i class="glyphicon glyphicon-heart btn btn-danger heart-button"></i>
+<% end %>
+
+<br />
+<br />
+
 <p>
   <%= link_to "<< prev", @post.prev %>
   <%= link_to "next >>", @post.next %>

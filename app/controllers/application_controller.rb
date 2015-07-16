@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def confirm_logged_in
-    unless session[:id]
+    unless session["warden.user.user.key"][1][0]
       flash[:notice] = "Please log in"
       redirect_to root_path
       return false
