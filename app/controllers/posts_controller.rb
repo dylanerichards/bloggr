@@ -63,8 +63,10 @@ class PostsController < ApplicationController
   end
 
   def upvote
-    @post.vote_by voter: current_user
-    redirect_to :back
+    if current_user?
+      @post.vote_by voter: current_user
+      redirect_to :back
+    end
   end
 
   private
