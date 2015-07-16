@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def confirm_logged_in
-    unless session["session_id"]
+    unless session["session_id"] == nil
       flash[:notice] = "Please log in"
       redirect_to root_path
       return false
