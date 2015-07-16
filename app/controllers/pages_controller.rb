@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def manage
-    @posts = Post.all
+    @posts = Post.all.reverse
   end
 
   def about
