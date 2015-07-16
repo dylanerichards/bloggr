@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<% @posts.each do |post| %>
-  <h1><%= link_to post.title, post %></h1>
-  <p><%= post.text %></p>
-  <p><i>Posted on <%= post.pretty_time %></i></p>
-<% end %>
+<div class="post-index">
+  <% @posts.each do |post| %>
+    <h1><%= link_to post.title, post %></h1>
+    <p><%= post.text %></p>
+    <p><i>Posted on <%= post.pretty_time %></i></p>
+  <% end %>
+</div>
 
