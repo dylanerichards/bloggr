@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root "posts#index"
 
   get 'pages/home'
-  get 'pages/manage'
-  get 'pages/about'
+  get 'pages/manage', path: '/manage'
+  get 'pages/about', path: '/about'
 end
