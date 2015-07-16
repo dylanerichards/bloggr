@@ -29,3 +29,4 @@ end
 gem 'bootstrap-sass'
 gem 'shoulda-matchers'
 gem 'devise'
+gem 'acts_as_votable'
