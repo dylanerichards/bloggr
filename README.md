@@ -1,5 +1,5 @@
 # Getting started
 * Clone the repository
-* `cd` into it
+* `cd bloggr`
 *  `rake db:migrate`
 *  `rails server`
