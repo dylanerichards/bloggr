@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   resources :posts
   root "posts#index"
 
-  get 'pages/home'
-  get 'pages/manage', path: '/manage'
-  get 'pages/about', path: '/about'
-  
+  %w(manage about).each do |page|
+    get "pages/#{page}", path: "/#{page}"
+  end
+
   get '/posts/heart/:id', to: 'posts#upvote', as: 'post_upvote'
 end
