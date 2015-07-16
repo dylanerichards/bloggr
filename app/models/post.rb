@@ -9,11 +9,7 @@ class Post < ActiveRecord::Base
   end
 
   def singular_or_plural_hearts
-    if self.get_upvotes.count == 1
-      'heart'
-    else
-      'hearts'
-    end
+    self.get_upvotes.count == 1 ? 'heart' : 'hearts'
   end
 
   def next
