@@ -28,4 +28,4 @@ end
 
 gem 'bootstrap-sass'
 gem 'shoulda-matchers'
-
+gem 'devise'
