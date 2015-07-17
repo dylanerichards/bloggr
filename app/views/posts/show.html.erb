@@ -1,23 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Text:</strong>
-  <%= @post.text %>
-</p>
+<h1><%= @post.title %></h1>
 
 <%= link_to post_upvote_path(@post) do %>
   <i class="glyphicon glyphicon-heart btn btn-danger heart-button"></i>
 <% end %>
 
+<p><small><%= @post.heart_count %></small></p>
+
+<br />
+
+<div>
+  <%= @post.text %>
+</div>
+
+
 <br />
 <br />
 
 <p>
-  <%= link_to "<< prev", @post.prev %>
-  <%= link_to "next >>", @post.next %>
+<%= link_to "<< prev", @post.prev %>
+<%= link_to "next >>", @post.next %>
 </p>

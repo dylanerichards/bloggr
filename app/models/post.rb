@@ -8,8 +8,9 @@ class Post < ActiveRecord::Base
     created_at.to_time.strftime('%B %e at %l:%M %p')
   end
 
-  def singular_or_plural_hearts
-    self.get_upvotes.count == 1 ? 'heart' : 'hearts'
+
+  def heart_count
+    "#{self.get_upvotes.count} #{singular_or_plural}"
   end
 
   def next
@@ -18,5 +19,11 @@ class Post < ActiveRecord::Base
 
   def prev
     Post.where("id < ?", id).last
+  end
+
+  private
+
+  def singular_or_plural
+    self.get_upvotes.count == 1 ? 'heart' : 'hearts'
   end
 end

@@ -13,7 +13,7 @@
     <p><%= post.text %></p>
     <p><i>Posted on <%= post.pretty_created_at %></i></p>
 
-    <p class='pull-right'><small><%= post.get_upvotes.size %> <%= post.singular_or_plural_hearts %></small></p>
+    <p class='pull-right'><small><%= post.heart_count %></small></p>
   <% end %>
 </div>
 
