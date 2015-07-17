@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     get "pages/#{page}", path: "/#{page}"
   end
 
-  get '/posts/:id/:heart', to: 'posts#upvote', as: 'post_upvote'
+  get '/posts/heart/:id', to: 'posts#upvote', as: 'post_upvote', path: 'posts/:id/heart'
 end
